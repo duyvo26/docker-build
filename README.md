@@ -16,3 +16,8 @@
 `docker exec -it api_duyvo26 bash`
 
 ---
+
+# Cập nhật danh sách các gói và cài đặt các gói cần thiết
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip git nano htop curl wget unzip && \
+    apt-get clean
