@@ -32,9 +32,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Cập nhật danh sách các gói và cài đặt các gói cần thiết cho runtime
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    apt-get clean && \
-    apt-get install -y git
+    apt-get install -y python3 python3-pip git nano htop curl wget unzip && \
+    apt-get clean
     
 # Thiết lập thư mục làm việc trong container
 WORKDIR /app
